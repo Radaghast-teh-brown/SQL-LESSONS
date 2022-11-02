@@ -67,7 +67,8 @@ INSERT INTO aluno(
 );
 ```
 
-###_ Searching for information_
+### _Insert values in the table_
+
 
 The SELECT statament is really important in this field. It seems to me that their functions is to search for different information in the databases.
 
