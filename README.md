@@ -7,6 +7,8 @@ These are my notes of the class of Database I from my College Course Information
 - Postegres
 - Videos from Alura
 
+## _Lesson 1_
+
 ### _Creating the table and their columns_
 
 To create the table 
@@ -64,6 +66,25 @@ INSERT INTO aluno(
 	'2022-11-02 15:34:00'
 );
 ```
+
+### _ Searching for information_
+
+The SELECT statament is really important in this field. It seems to me that their functions is to search for different information in the databases.
+
+To search for the row _nome_  in the table:
+
+```
+SELECT nome FROM aluno
+```
+
+To search for the hole table
+
+```
+SELECT * FROM aluno
+
+```
+
+
 
 
 
