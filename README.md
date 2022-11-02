@@ -16,7 +16,7 @@ CREATE TABLE aluno()
 ```
 Addind their columns with differents data types
 
-`
+```
 CREATE TABLE aluno(
   id SERIAL,
 	nome VARCHAR(255)  		 NOT NULL,
@@ -31,5 +31,5 @@ CREATE TABLE aluno(
 	matriculado_em TIMESTAMP NOT NULL
 
 );
-`
+```
 
