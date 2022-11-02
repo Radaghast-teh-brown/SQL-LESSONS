@@ -9,7 +9,7 @@ These are my notes of the class of Database I from my College Course Information
 
 ## _Lesson 1_
 
-### _Creating the table and their columns_
+###_Creating the table and their columns_
 
 To create the table 
 ```
@@ -67,7 +67,7 @@ INSERT INTO aluno(
 );
 ```
 
-### _ Searching for information_
+###_ Searching for information_
 
 The SELECT statament is really important in this field. It seems to me that their functions is to search for different information in the databases.
 
