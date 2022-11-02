@@ -9,9 +9,8 @@ These are my notes of the class of Database I from my College Course Information
 
 ### _Creating the table and their columns_
 
-To create the table
+[#1589F0]To create the table
 ```
 CREATE TABLE aluno()
-`#0d1117`
 ```
 
