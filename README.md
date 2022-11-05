@@ -20,7 +20,7 @@ Addind their columns with differents data types
 
 ```
 CREATE TABLE aluno(
-  id SERIAL,
+  	id SERIAL,
 	nome VARCHAR(255)  		 NOT NULL,
 	cpf CHAR(11)       		 NOT NULL,
 	observacao TEXT    		 NOT NULL,
@@ -85,6 +85,31 @@ SELECT * FROM aluno
 
 ```
 
+
+### _Updating information_
+
+The UPDATE statament updates the data in database. We use this command to make it
+
+```
+UPDATE aluno
+	set nome = 'Juca',
+	idade = 28
+	WHERE id = 1;
+	
+```
+
+### Selecting specific columns information
+
+As a DataBase Administrator we have to search for specific information in our database.
+We use the SELECT statament and AS to specify the data with extra comment
+
+```
+SELECT idade AS "Idade do aluno",
+	nome AS "Nome do aluno",
+	matriculado_em AS "Quando foi matriculado"
+	FROM aluno;
+
+```
 
 
 
