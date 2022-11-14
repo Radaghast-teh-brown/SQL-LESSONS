@@ -36,6 +36,9 @@ CREATE TABLE aluno(
 ```
 The NOT NULL means that when que insert the datas we can leave theses columns empty. 
 
+
+## _Lesson 2_
+
 ### _Insert values in the table_
 
 To insert values. Each data has to be fill with the correct data type
@@ -67,6 +70,8 @@ INSERT INTO aluno(
 );
 ```
 
+## _Lesson 3_
+
 ### _Searching for information_
 
 
@@ -85,6 +90,7 @@ SELECT * FROM aluno
 
 ```
 
+## _Lesson 4_
 
 ### _Updating information_
 
@@ -110,6 +116,42 @@ SELECT idade AS "Idade do aluno",
 	FROM aluno;
 
 ```
+
+## _Lesson 5_
+
+### _Logical Operators_
+
+To select some information or to change some data we need to put specific rules to do it. The logical operators help us do it. They are
+
+- >=  		- greater than
+- <=  		- less than
+- <> or != 	- different
+- AND
+- OR
+- IS
+- NOT
+- BETWEEN
+
+Example:
+
+```
+SELECT idade
+	FROM aluno
+	WHERE aluno >= 10 
+```
+
+```
+SELECT nome 
+	FROM aluno
+	WHERE nome <> 'Juca'
+```
+
+```
+SELECT *
+	FROM aluno
+	WHERE idade BETWEEN 10 AND 50 AND OR nome = 'Jesus';
+```
+
 
 
 
