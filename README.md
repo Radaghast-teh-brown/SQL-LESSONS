@@ -153,6 +153,52 @@ SELECT *
 ```
 
 
+## _Lesson 6_
 
+## _Primary Key and Foreign Key_
+Every table in our database needs to be defined with a primary key or foreign key. These attributes are used to qualify our table UNIQUELY. The stataments PRIMARY KEY and FOREIGN KEY can be used like:
 
+```
+CREATE TABLE course(
+	name_course VARCHAR(50),
+	code_course NUMERIC(10),
+	PRIMARY KEY (code_course)
+)
+```
+Foreign keys are used to conect two tables from their primary key. Sometimes we need  to use some primary key from other table to make our current table consistent.
+
+```
+CREATE TABLE instructor(
+	name_instructor VARCHAR(50),
+	code_instructor NUMERIC(10),
+	age_instructor INTEGER,
+	code_course NUMERIC(10),
+	FOREIGN KEY (code_course) REFERENCES course(code_course)
+	
+)
+
+```
+
+We also can have compost primary or foreign keys.
+
+```
+CREATE TABLE course(
+	name_course VARCHAR(50),
+	code_course NUMERIC(10),
+	PRIMARY KEY (code_course, name_course)
+)
+```
+
+```
+CREATE TABLE instructor(
+	name_instructor VARCHAR(50),
+	code_instructor NUMERIC(10),
+	age_instructor INTEGER,
+	code_course NUMERIC(10),
+	name_course VARCHAR(50),
+	FOREIGN KEY (code_course, name_course) REFERENCES course(code_course, name_course)
+	
+)
+
+```
 
