@@ -202,3 +202,74 @@ CREATE TABLE instructor(
 
 ```
 
+## _Lesson 7_
+
+### Join
+
+Sometimes is necessary to access data from different tables that have some combination. We use JOIN statament and their variations to do it. This are the types of JOIN:
+- INNER JOIN
+- RIGHT JOIN
+- LEFT JOIN
+- OUTER JOIN
+
+To show how this work I created two tables with commom information.
+
+```
+
+CREATE TABLE tabelaA(
+	nome VARCHAR(50)
+	
+);
+
+CREATE TABLE  tabelaB(
+	nome VARCHAR(50)
+)
+
+INSERT INTO tabelaA(nome) VALUES('Magno');
+INSERT INTO tabelaA(nome) VALUES('João Pedro');
+INSERT INTO tabelaA(nome) VALUES('Maurício');
+INSERT INTO tabelaA(nome) VALUES('Ricardo');
+
+INSERT INTO tabelaB(nome) VALUES('Ana');
+INSERT INTO tabelaB(nome) VALUES('Magno');
+INSERT INTO tabelaB(nome) VALUES('Ricardo');
+INSERT INTO tabelaB(nome) VALUES('Monica');
+
+``` 
+
+The inner join will return only datas that are in both tables
+
+```
+SELECT a.nome, b.nome
+	FROM tabelaA as A
+	INNER JOIN tabelaB as B
+		ON a.nome = b.nome
+```
+The result are 'Magno' and 'Ricardo'.
+The RIGHT JOIN will return only datas that are right (the second table) and are included in the first table. The LEFT JOIN does the opposite. 
+
+```
+SELECT a.nome, b.nome
+	FROM tabelaA as a
+	RIGHT JOIN tabelaB as B
+		ON a.nome = b.nome;
+```
+The results are the names 'Magno', 'Ricardo', 'Ana' and 'Monica'
+Doing the LEFT JOIN the results are 'Magno', 'Ricardo', 'Joao Pedro ' and 'Mauricio'.
+
+```
+SELECT a.nome, b.nome
+	FROM tabelaA as a
+	LEFT JOIN tabelaB as B
+		ON a.nome = b.nome;
+```
+
+The OUTER JOIN returns all the datas in both table.
+
+```
+SELECT a.nome, b.nome
+	FROM tabelaA as a
+	FULL OUTER JOIN tabelaB as B
+		ON a.nome = b.nome;
+
+```
