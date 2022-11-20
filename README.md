@@ -2,6 +2,8 @@
 
 These are my notes of the class of Database I from my College Course Information System. 
 
+![image](https://user-images.githubusercontent.com/84158231/202919667-e1accc6e-9a5f-48c3-8e05-aae029d00605.png)
+
 ## _Tools_
 
 - Postegres
