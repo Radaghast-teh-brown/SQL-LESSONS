@@ -275,3 +275,17 @@ SELECT a.nome, b.nome
 		ON a.nome = b.nome;
 
 ```
+
+## _Lesson 8_
+
+### _Altering tables_
+
+Sometimes we make mistakes when we create tables or maybe we need to alter some column to make our database more consistent. To do this we can use the statemant ALTER. 
+For exemple, suppose we need to drop one columnn and add another one. We could do something like this:
+
+```
+ALTER TABLE student
+DROP column cpf,
+ADD column CNPJ VARCHAR(14) NOT NULL;
+
+```
