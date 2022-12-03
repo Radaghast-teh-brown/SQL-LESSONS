@@ -157,7 +157,7 @@ SELECT *
 
 ## _Lesson 6_
 
-## _Primary Key and Foreign Key_
+### _Primary Key and Foreign Key_
 Every table in our database needs to be defined with a primary key or foreign key. These attributes are used to qualify our table UNIQUELY. The stataments PRIMARY KEY and FOREIGN KEY can be used like:
 
 ```
@@ -289,3 +289,17 @@ DROP column cpf,
 ADD column CNPJ VARCHAR(14) NOT NULL;
 
 ```
+
+## _Lesson 9_
+### _Joins and reports_
+
+We need to use JOIN when we have to make reports take connect differents columns from different tables. We can do this as shown below
+
+```
+SELECT  curso.nome,
+		COUNT(aluno_curso.aluno_id) AS numero_alunos
+	FROM curso
+	JOIN aluno_curso ON aluno_curso.curso_id = curso.id
+	GROUP BY curso.nome;
+```
+I was searching from information of the table curso, but I needed information of the table aluno_curso. So I used JOIN ... ON to specify which column I was needing. The report has information of both tables (curso and aluno_curso).
